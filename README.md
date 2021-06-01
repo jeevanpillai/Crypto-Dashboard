@@ -17,7 +17,7 @@ Obtaining ticker data from Binance and Luno is easy enough, as these GET request
 
 >It is important to note that API Keys may compromise your wallet integrity. As such, for projects that require read-only information such as this, it's highly recommended that the API Keys generated are generated as READ-ONLY
 
-For Binance however, things are more complicated. The API_KEY is first passed in the header with `X-MBX-APIKEY`. Then the query string needs to be generated with the mandatory `timestamp` parameter, along with the optional `recvWindow` parameter which denotes the duration of validity of the request. The `timestamp` parameter should not be more than 1000ms lesser than the server time or the request is rejected. The query string will end up looking something like:
+For Binance however, things are more complicated. The `API_KEY` is first passed in the header with `X-MBX-APIKEY`. Then the query string needs to be generated with the mandatory `timestamp` parameter, along with the optional `recvWindow` parameter which denotes the duration of validity of the request. The `timestamp` parameter should not be more than 1000ms lesser than the server time or the request is rejected. The query string will end up looking something like:
 
 >`timestamp=1621959833&recvWindow=20000`
 
